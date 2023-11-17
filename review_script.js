@@ -126,7 +126,12 @@ function getCurrentDate() {
     var year = currentDate.getFullYear();
 
     // Приводим к формату DD.MM.YYYY
-    return `${formatNumber(day)}.${formatNumber(month)}.${year}`;
+    return formatNumber(day) + '.' + formatNumber(month) + '.' + year;
+}
+
+function formatNumber(number) {
+    // Функция для добавления ведущего нуля к числам < 10
+    return number < 10 ? '0' + number : number;
 }
 
 let default_revs = document.getElementById("revs");
