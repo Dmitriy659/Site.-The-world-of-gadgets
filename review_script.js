@@ -67,6 +67,25 @@ function Reviews(default_revs_elements) {
         this.elements_to_show = this.default_revs_elements.slice(0, this.show_count);
         this.update();
     }
+    this.sort_date = function() {
+        this.default_revs_elements.sort(function(a, b) {
+            var reg = /-|:|T|\+/;
+            var parsedA = a.querySelector("#rev_date").textContent.split(reg);
+            var parsedB = b.querySelector("#rev_date").textContent.split(reg);
+
+            var dateA = new Date(parsedA[0], parsedA[1] - 1, parsedA[2], parsedA[3], parsedA[4], parsedA[5]);
+            var dateB = new Date(parsedB[0], parsedB[1] - 1, parsedB[2], parsedB[3], parsedB[4], parsedB[5]);
+            if (selectedOption == 5) {
+                return dateA - dateB;
+            }
+            else {
+                return dateB - dateA;
+            }
+        });
+
+        this.elements_to_show = this.default_revs_elements.slice(0, this.show_count);
+        this.update();
+    }
 
     this.add = function (element) {
         this.total++;
@@ -117,21 +136,6 @@ function Captcha(element) {
         }
     }
 
-}
-
-function getCurrentDate() {
-    var currentDate = new Date();
-    var day = currentDate.getDate();
-    var month = currentDate.getMonth() + 1; // Месяцы начинаются с 0
-    var year = currentDate.getFullYear();
-
-    // Приводим к формату DD.MM.YYYY
-    return formatNumber(day) + '.' + formatNumber(month) + '.' + year;
-}
-
-function formatNumber(number) {
-    // Функция для добавления ведущего нуля к числам < 10
-    return number < 10 ? '0' + number : number;
 }
 
 let default_revs = document.getElementById("revs");
