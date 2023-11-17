@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир Гаджетов</title>
+    <link rel="icon" type="image/png" href="img/icons8-vr-24.png" sizes="24x24"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_reviews.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&family=Montserrat+Alternates:ital@1&family=Open+Sans&family=Oswald:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <header>
+        <div class="top_menu">
+            <div class="top_menu_info">
+                <div class="menu_left">
+                    <div class="icon_menu">
+                        <img src="img/icon.png" alt="Логотип сайта">
+                    </div>
+                    <div class="top_menu_head">
+                        <h1>Гаджеты 21 века</h1>
+                    </div>
+                </div>
+                <div class="top_menu_butt">
+                    <a href="index.html" class="page">Телефоны</a>
+                    <a href="index_clock.html" class="page">Часы</a>
+                    <a class="page">VR-очки</a>
+                    <a class="page">Отзывы</a>
+                </div>
+                <div class="menu_mobile">
+                    <div class="make_menu">
+                        <div class="for_mobile">
+                            <p>Меню</p>
+                        </div>
+                        <a href="#menu" class="burger" id="burger">
+                            <div class="burger_part"></div>
+                        </a>
+                        <ul id="menu" class="menu_mobile_touch">
+                            <li><a class="page_m">Новости</a></li>
+                            <li><a href="index.html" class="page_m">Телефоны</a></li>
+                            <li><a href="index_clock.html" class="page_m">Часы</a></li>
+                            <li><a class="page_m">Гарнитуры</a></li>
+                            <li><a href="#" id="close-button">Закрыть</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </header>
+        <main>
+            <h2 class="name">Отзывы</h2>
+            <p class="head_info">Добро пожаловать на страницу отзывов, где ваш голос имеет ключевое значение! Здесь наши пользователи делятся своими впечатлениями о нашем сайте, раскрывают свой опыт взаимодействия с нашими услугами и делятся мнениями о том, что делает нас уникальными. Мы ценим каждый отзыв, так как он является для нас не только оценкой нашей работы, но и источником вдохновения для постоянного совершенствования. Присоединяйтесь к нашему дружелюбному сообществу, где ваш голос важен, и ваш опыт — ценен. Давайте вместе создадим лучший опыт для каждого посетителя нашего сайта!</p>
+
+            <div class="rev_container">
+                <div class="rev_manage">
+                    <div>
+                        <div class="wrapper">
+                            <div class="div_text_okno">
+                                <a class="text_for_okno" href="#zatemnenie">Оставить отзыв</a>
+                            </div>
+                        </div>
+                        <div id="zatemnenie">
+                            <div id="okno">
+                                <div class="review_fields">
+                                    <h2>Оставьте отзыв</h2>
+                                        <form id="create_review">
+                                            <p>
+                                            <input id="new_rev_name" type="text" placeholder="Имя" required>
+                                            </p>
+                                            <p>
+                                            <input type="email" placeholder="Email">
+                                            </p>
+                                            <p>
+                                            <input id="new_rev_text" placeholder="Текст отзыва" required>
+                                            <p></p>
+                                            <input id="new_rev_rating" placeholder="Оценка" type="number" min="0" max="10" step="0.1" required>
+                                            </p>
+                                            <p class="send_p">
+                                            <input id="send_review" type="submit" value="Отправить"></input>
+                                            </p>
+                                        </form>
+                                </div>
+                                <div class="close">
+                                    <a href="#">Закрыть окно</a>
+                                </div>
+                                <div class="square square1"></div>
+                                <div class="square square2"></div>
+                                <div class="square square3"></div>
+                                <div class="square square4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div rev_form>
+                        <form id="rev_form">
+                            <label id="label_sort" for="dropdown">Сортирвока:</label>
+                            <select name="dropdown" id="sort_opt">
+                                <option value="2">Сначала высокая оценка</option>
+                                <option value="3">Сначала низкая оценка</option>
+                                <option value="4">Сначала новые</option>
+                                <option value="5">Сначала старые</option>
+                            </select>
+                            <input type="submit" value="Отсортировать" id="sort_but">
+                        </form>
+                    </div>
+                </div>
+
+                <div id="revs">
+                    <div class="rev rev1">
+                        <div class="rev_name">
+                            <strong id="user_name">Иван</strong>
+                            <strong id="rev_value">10</strong>
+                            <img src="img/Reviews/star.png" alt="stars">
+                        </div>
+                        <p id="rev_date">10.10.2023</p>
+                        <p class="rev_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, numquam quaerat non aut neque labore incidunt! In, eaque architecto! Itaque saepe harum veniam! Eum, magni? Vitae ea eligendi fugit qui. Error sequi quam a laudantium magnam dolor numquam. Accusantium, eveniet. Temporibus qui, commodi amet officiis repudiandae corrupti voluptas quidem consequuntur!</p>
+                    </div>
+                    <div class="rev rev2">
+                        <div class="rev_name">
+                            <strong id="user_name">Максим</strong>
+                            <strong id="rev_value">8.5</strong>
+                            <img src="img/Reviews/star.png" alt="stars">
+                        </div>
+                        <p id="rev_date">08.09.2023</p>
+                        <p class="rev_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam sint necessitatibus totam. Iusto maxime labore illo mollitia voluptates quidem distinctio consequuntur quod ipsum exercitationem qui repellendus, minus officiis ratione amet quaerat nihil ullam incidunt fugit, esse atque id eius quos.</p>
+                    </div>
+                    <div class="rev rev3">
+                        <div class="rev_name">
+                            <strong id="user_name">Михаил</strong>
+                            <strong id="rev_value">9.8</strong>
+                            <img src="img/Reviews/star.png" alt="stars">
+                        </div>
+                        <p id="rev_date">05.23.2023</p>
+                        <p class="rev_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, numquam quaerat non aut neque labore incidunt! In, eaque architecto! Itaque saepe harum veniam! Eum, magni? Vitae ea eligendi fugit qui. Error sequi quam a laudantium magnam dolor numquam. Accusantium, eveniet. Temporibus qui, commodi amet officiis repudiandae corrupti voluptas quidem consequuntur!</p>
+                    </div>
+                    <div class="rev rev4">
+                        <div class="rev_name">
+                            <strong id="user_name">Алексей</strong>
+                            <strong id="rev_value">10</strong>
+                            <img src="img/Reviews/star.png" alt="stars">
+                        </div>
+                        <p id="rev_date">06.12.2023</p>
+                        <p class="rev_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, numquam quaerat non aut neque labore incidunt! In, eaque architecto! Itaque saepe harum veniam! Eum, magni? Vitae ea eligendi fugit qui. Error sequi quam a laudantium magnam dolor numquam. Accusantium, eveniet. Temporibus qui, commodi amet officiis repudiandae corrupti voluptas quidem consequuntur!</p>
+                    </div>
+                    <div class="rev rev5">
+                        <div class="rev_name">
+                            <strong id="user_name">Марина</strong>
+                            <strong id="rev_value">7.9</strong>
+                            <img src="img/Reviews/star.png" alt="stars">
+                        </div>
+                        <p id="rev_date">07.12.2023</p>
+                        <p class="rev_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, numquam quaerat non aut neque labore incidunt! In, eaque architecto! Itaque saepe harum veniam! Eum, magni? Vitae ea eligendi fugit qui. Error sequi quam a laudantium magnam dolor numquam. Accusantium, eveniet. Temporibus qui, commodi amet officiis repudiandae corrupti voluptas quidem consequuntur!</p>
+                    </div>
+                    <div class="rev rev6">
+                        <div class="rev_name">
+                            <strong id="user_name">Вика</strong>
+                            <strong id="rev_value">8.2</strong>
+                            <img src="img/Reviews/star.png" alt="stars">
+                        </div>
+                        <p id="rev_date">08.12.2023</p>
+                        <p class="rev_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, numquam quaerat non aut neque labore incidunt! In, eaque architecto! Itaque saepe harum veniam! Eum, magni? Vitae ea eligendi fugit qui. Error sequi quam a laudantium magnam dolor numquam. Accusantium, eveniet. Temporibus qui, commodi amet officiis repudiandae corrupti voluptas quidem consequuntur!</p>
+                    </div>
+                </div>
+                <div id="load_button">
+                    <button id="load_more_rev"><span>Заргузить ещё</span></button>
+                </div>
+
+                <div id="captcha">
+                    <div id="captcha_text">
+                        <p id="captcha_t">retret</p>
+                    </div>
+                    <div class="captcha_but">
+                        <form id="check_c">
+                            <label for="input_captcha" id="label_cap_text">Введите капчу:</label>
+                            <input id="input_captcha" name="input_captcha" type="text" required>
+                            <input type="submit" id="send_captcha" value="Отправить"></input>
+                        </form>
+                        <button id="close_captcha">Закрыть</button>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+        <footer>
+            <div class="footer-with-grid">
+                <div class="footer-grid-item footer-grid-item-1">
+                    <h2>О нас</h2>
+                    <p>Мы — команда энтузиастов, предлагающая краткую, но информативную подборку о гаджетах. Наши обзоры и статьи созданы для того, чтобы помочь вам сориентироваться в мире технологий, выбрать подходящий гаджет и быть в курсе последних трендов.</p>
+                </div>
+                <div class="footer-grid-item footer-grid-item-2">
+                    <h2>Полезные ссылки</h2>
+                    <p><a href="#">FAQ</a></p>
+                    <p><a href="#">Политика конфиденциальности</a></p>
+                    <p><a href="#">Помощь</a></p>
+                    <p><a href="#">Наши социальные сети</a></p>
+                </div>
+                <div class="footer-grid-item footer-grid-item-3">
+                    <h2 id="contact">Контакты</h2>
+                    <p><i class="material-icons">mail</i><a class="cont_inf" href="malito:ssssss125@gmail.com"> Написать на почту</a></p> 
+                    <p><i class="material-icons">call</i><a class="cont_inf" href="tel:89176591600"> Позвонить по номеру</a></p>
+                </div>
+            </div>  
+        </footer>
+</body>
+<script src="review_script.js"></script>
+</html>
