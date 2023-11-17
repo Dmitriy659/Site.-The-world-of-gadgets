@@ -19,6 +19,10 @@
     margin-bottom: 10px;
 }
 
+#rev_form > label, #rev_form > select, #rev_form > input {
+    margin: 8px;
+}
+
 #label_sort {
     font-size: 30px;
 }
@@ -134,6 +138,11 @@
 
 #create_review input {
     font-size: 20px;
+}
+
+#create_review input {
+    font-size: 18px;
+    min-width: 120px;
 }
 
 .send_p {
@@ -317,23 +326,74 @@
     animation-delay: 5.1s;
 }
 
+@media screen and (max-width: 800px) {
+
+    #rev_form {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+}
+
 @media screen and (max-width: 760px) {
     #okno {
         width: 50%;
         left: 25%;
     }
-}
 
-@media screen and (max-width: 414px){
-    #okno {
+    #captcha {
         width: 60%;
         left: 20%;
+    }
+
+    .captcha_but {
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    #user_name, #rev_value {
+        font-size: 24px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    #rev_value {
+        margin-left: 14px;
+    }
+    .rev_name > img {
+        width: 30px;
+        height: 30px;
+    }
+    #okno {
+        width: 80%;
+        left: 10%;
+    }
+    #create_review input {
+        font-size: 18px;
+    }
+
+}
+
+
+@media screen and (max-width: 414px){
+    #rev_form > label, #rev_form > select, #rev_form > input {
+        font-size: 18px;
+    }
+    #captcha {
+        width: 80%;
+        left: 10%;
+    }
+
+    .captcha_but {
+        width: 80%;
     }
 }
 
 @media screen and (max-width: 380px) {
     .div_text_okno {
-        max-width: 120px;
+        max-width: 240px;
     }
     .div_text_okno > a {
         font-size: 14px;
