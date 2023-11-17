@@ -61,6 +61,7 @@ function Reviews(default_revs_elements)
         this.default_revs_elements.sort(function(a, b) {
             var dateA = new Date(a.querySelector("#rev_date").textContent);
             var dateB = new Date(b.querySelector("#rev_date").textContent);
+            alert(dateA);
             if (selectedOption == 5)
             {
                 return dateA - dateB;
