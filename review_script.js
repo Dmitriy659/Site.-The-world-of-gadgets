@@ -121,7 +121,12 @@ function Captcha(element) {
 
 function getCurrentDate() {
     var currentDate = new Date();
-    return currentDate.toLocaleDateString();
+    var day = currentDate.getDate();
+    var month = currentDate.getMonth() + 1; // Месяцы начинаются с 0
+    var year = currentDate.getFullYear();
+
+    // Приводим к формату DD.MM.YYYY
+    return `${formatNumber(day)}.${formatNumber(month)}.${year}`;
 }
 
 let default_revs = document.getElementById("revs");
