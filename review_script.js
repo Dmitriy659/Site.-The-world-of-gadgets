@@ -1,7 +1,10 @@
-function Reviews(default_revs_elements) {
-    if (default_revs_elements.length <= 3) {
+function Reviews(default_revs_elements)
+{
+    if (default_revs_elements.length <= 3)
+    {
         this.show_count = default_revs_elements.length;
-    } else {
+    }
+    else {
         this.show_count = 3;
     }
     this.default_revs_elements = default_revs_elements;
@@ -9,37 +12,38 @@ function Reviews(default_revs_elements) {
     this.elements_to_show = [];
     this.elements_to_show = default_revs_elements.slice(0, this.show_count);
 
-    default_revs_elements.forEach(function (card) {
+    default_revs_elements.forEach(function(card) {
         default_revs.removeChild(card);
     });
 
-    this.elements_to_show.forEach(function (card) {
+    this.elements_to_show.forEach(function(card) {
         default_revs.appendChild(card);
     });
 
-    this.load_more = function () {
+    this.load_more = function() {
         if (this.show_count + 2 >= this.total) {
             Array.prototype.push.apply(this.elements_to_show, default_revs_elements.slice(this.show_count, this.total));
             this.show_count = this.total;
             load_but.style.display = "none";
-        } else {
+        } 
+        else {
             this.show_count += 2;
             Array.prototype.push.apply(this.elements_to_show, default_revs_elements.slice(this.show_count - 2, this.show_count));
         }
         this.update();
     }
 
-    this.update = function () {
+    this.update = function() {
         let a = document.getElementById("revs");
         a.innerHTML = '';
 
-        this.elements_to_show.forEach(function (card) {
+        this.elements_to_show.forEach(function(card) {
             a.appendChild(card);
         });
     }
 
-    this.sort_ocenka = function (opt) {
-        this.default_revs_elements.sort(function (a, b) {
+    this.sort_ocenka = function(opt) {
+        this.default_revs_elements.sort(function(a, b) {
             var valueA = parseFloat(a.querySelector("#rev_value").textContent);
             var valueB = parseFloat(b.querySelector("#rev_value").textContent);
             if (opt == 2) {
@@ -72,10 +76,11 @@ function Reviews(default_revs_elements) {
     function getDateFromString(dateString) {
         var parts = dateString.split('.');
         // Преобразование частей даты в числа (Месяцы начинаются с 0)
-        return new Date(parts[2], parts[0] - 1, parts[1]);
+        return new Date(parts[2], parts[0], parts[1] - 1);
     }
+    
 
-    this.add = function (element) {
+    this.add = function(element) {
         this.total++;
         this.default_revs_elements.unshift(element);
         this.elements_to_show = this.default_revs_elements.slice(0, this.show_count);
@@ -84,12 +89,14 @@ function Reviews(default_revs_elements) {
     }
 }
 
-function Captcha(element) {
+
+function Captcha(element)
+{
     this.element = element;
     this.text = "";
     this.try = 1;
 
-    this.gennerate_t = function () {
+    this.gennerate_t = function() {
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
         let randomText = '';
 
@@ -101,7 +108,7 @@ function Captcha(element) {
         this.element.textContent = randomText;
     }
 
-    this.check = function (q) {
+    this.check = function(q) {
         var t = document.getElementById("label_cap_text");
         if (q === this.text) {
             document.getElementById("captcha").style.display = "none";
@@ -109,9 +116,11 @@ function Captcha(element) {
             t.style.color = "black";
             document.getElementById("input_captcha").value = "";
             return 1;
-        } else {
+        } 
+        else {
             this.try++;
-            if (this.try > 2) {
+            if (this.try > 2)
+            {
                 document.getElementById("captcha").style.display = "none";
                 t.textContent = "Введите капчу:";
                 t.style.color = "black";
@@ -126,6 +135,14 @@ function Captcha(element) {
 
 }
 
+function getCurrentDate() {
+    var currentDate = new Date();
+    var day = currentDate.getDate();
+    var month = currentDate.getMonth() + 1; // Месяцы начинаются с 0
+    var year = currentDate.getFullYear();
+    return `${month}.${day}.${year}`;
+}
+
 let default_revs = document.getElementById("revs");
 let default_revs_elements = Array.from(default_revs.children);
 let Review = new Reviews(default_revs_elements);
@@ -136,22 +153,25 @@ let sort_form = document.getElementById("rev_form");
 
 let create_rev = document.getElementById("create_review");
 
-load_but.addEventListener("click", function (event) {
+load_but.addEventListener("click", function(event) {
     event.preventDefault();
     Review.load_more();
 });
 
-sort_form.addEventListener("submit", function (event) {
+sort_form.addEventListener("submit", function(event) {
     event.preventDefault();
     var selectedOption = document.getElementById("sort_opt").value;
-    if (selectedOption == 2 || selectedOption == 3) {
+    if (selectedOption == 2 || selectedOption == 3)
+    {
         Review.sort_ocenka(selectedOption);
-    } else {
+    }
+    else
+    {
         Review.sort_date(selectedOption);
     }
 });
 
-create_rev.addEventListener("submit", function (event) {
+create_rev.addEventListener("submit", function(event) {
     event.preventDefault();
 
     var cap = document.getElementById("captcha");
@@ -164,7 +184,7 @@ create_rev.addEventListener("submit", function (event) {
     var captcha = new Captcha(cap_text);
     captcha.gennerate_t();
 
-    close_cap.addEventListener("click", function (event) {
+    close_cap.addEventListener("click", function(event) {
         event.preventDefault();
         cap.style.display = "none";
         var t = document.getElementById("label_cap_text");
@@ -174,12 +194,12 @@ create_rev.addEventListener("submit", function (event) {
         captcha = null;
     });
 
-    send_cap.addEventListener("submit", function (event) {
+    send_cap.addEventListener("submit", function(event) {
         event.preventDefault();
 
         var text_for_check = document.getElementById("input_captcha");
         var res = captcha.check(text_for_check.value);
-
+    
         if (res === 1) {
             var name = document.getElementById("new_rev_name").value;
             var reviewText = document.getElementById("new_rev_text").value;
@@ -198,9 +218,12 @@ create_rev.addEventListener("submit", function (event) {
             `;
             Review.add(newReviewElement);
             captcha = null;
-        } else if (res === 3) {
+        }
+        else if(res === 3)
+        {
             captcha = null;
         }
-
+    
     });
 });
+
