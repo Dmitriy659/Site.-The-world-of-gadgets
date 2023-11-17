@@ -53,38 +53,26 @@ function Reviews(default_revs_elements) {
         this.update();
     }
 
-    this.sort_date = function (selectedOption) {
-        this.default_revs_elements.sort(function (a, b) {
-            var dateA = new Date(a.querySelector("#rev_date").textContent);
-            var dateB = new Date(b.querySelector("#rev_date").textContent);
+    this.sort_date = function(selectedOption) {
+        this.default_revs_elements.sort(function(a, b) {
+            var dateA = new Date(getDateFromString(a.querySelector("#rev_date").textContent));
+            var dateB = new Date(getDateFromString(b.querySelector("#rev_date").textContent));
+    
             if (selectedOption == 5) {
                 return dateA - dateB;
             } else {
                 return dateB - dateA;
             }
         });
-
+    
         this.elements_to_show = this.default_revs_elements.slice(0, this.show_count);
         this.update();
     }
-    this.sort_date = function() {
-        this.default_revs_elements.sort(function(a, b) {
-            var reg = /-|:|T|\+/;
-            var parsedA = a.querySelector("#rev_date").textContent.split(reg);
-            var parsedB = b.querySelector("#rev_date").textContent.split(reg);
-
-            var dateA = new Date(parsedA[0], parsedA[1] - 1, parsedA[2], parsedA[3], parsedA[4], parsedA[5]);
-            var dateB = new Date(parsedB[0], parsedB[1] - 1, parsedB[2], parsedB[3], parsedB[4], parsedB[5]);
-            if (selectedOption == 5) {
-                return dateA - dateB;
-            }
-            else {
-                return dateB - dateA;
-            }
-        });
-
-        this.elements_to_show = this.default_revs_elements.slice(0, this.show_count);
-        this.update();
+    
+    function getDateFromString(dateString) {
+        var parts = dateString.split('.');
+        // Преобразование частей даты в числа (Месяцы начинаются с 0)
+        return new Date(parts[2], parts[0] - 1, parts[1]);
     }
 
     this.add = function (element) {
