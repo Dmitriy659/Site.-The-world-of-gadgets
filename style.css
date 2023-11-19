@@ -441,7 +441,7 @@ a:hover {
     right: 2%;
     bottom: -50%;
     background-color: #407ce3; /* Скрываем содержимое, которое выходит за границы блока */
-    transition: bottom 1s ease-in-out; /* Анимация изменения ширины */
+    transition: bottom 0.5s ease-in-out; /* Анимация изменения ширины */
 }
 .bell {
     width: 22px;
@@ -449,13 +449,6 @@ a:hover {
     background-image: url(img/notification.png);
     background-repeat: none;
     background-size: cover;
-}
-.notification-wrapper:hover .notification {
-    opacity: 0;
-}
-.notification-wrapper:hover .instead_notification {
-    opacity: 1;
-    bottom: 2%;
 }
 
  /* Футер-грид */

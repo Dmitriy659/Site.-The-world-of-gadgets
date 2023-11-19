@@ -180,17 +180,16 @@
                 </div>  
             </div>
             <div class="notification-wrapper">
-                <div class="notification">
+                <div class="notification" id="notificationIcon"></div>
+                <div class="instead_notification" id="notificationWindow">
+                  <div class="bell"></div>
+                  <ul class="notif_on_hover">
+                    <li>Обновления</li>
+                    <li>Был обновлён дизайн главной страницы</li>
+                    <li>Теперь, чтобы оставить отзыв, нужно ввести капчу</li>
+                  </ul>
                 </div>
-                <div class="instead_notification">
-                    <div class="bell"></div>
-                    <ul class="notif_on_hover">
-                        <li>Обновления</li>
-                        <li>Был обновлён дизайн главной страницы</li>
-                        <li>Теперь, чтобы оставить отзыв, нужно ввести капчу</li>
-                    </ul>
-                </div>
-            </div>
+              </div>
         </main>
         <footer>
             <div class="footer-with-grid">
@@ -214,6 +213,7 @@
         </footer>
 </body>
 <script src="review_script.js"></script>
+<script src="notif.js"></script>
 <script>
     var image = document.getElementById("myImage");
   
