@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мир Гаджетов</title>
-    <link rel="icon" type="image/png" href="img/icons8-vr-24.png" sizes="24x24"/>
+    <link rel="icon" type="image/png" href="img/icons8-review-24.png" sizes="24x24"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style_reviews.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&family=Montserrat+Alternates:ital@1&family=Open+Sans&family=Oswald:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
@@ -16,16 +16,16 @@
             <div class="top_menu_info">
                 <div class="menu_left">
                     <div class="icon_menu">
-                        <img src="img/icon.png" alt="Логотип сайта">
+                        <img src="img/icon.png" alt="Логотип сайта" id="myImage">
                     </div>
                     <div class="top_menu_head">
                         <h1>Гаджеты 21 века</h1>
                     </div>
                 </div>
                 <div class="top_menu_butt">
-                    <a href="index.html" class="page">Телефоны</a>
+                    <a href="index_phones.html" class="page">Телефоны</a>
                     <a href="index_clock.html" class="page">Часы</a>
-                    <a class="page">VR-очки</a>
+                    <a href="index_vr.html" class="page">VR-очки</a>
                     <a class="page">Отзывы</a>
                 </div>
                 <div class="menu_mobile">
@@ -38,7 +38,7 @@
                         </a>
                         <ul id="menu" class="menu_mobile_touch">
                             <li><a href="reviews.html" class="page_m">Отзывы</a></li>
-                            <li><a href="index.html" class="page_m">Телефоны</a></li>
+                            <li><a href="index_phones.html" class="page_m">Телефоны</a></li>
                             <li><a href="index_clock.html" class="page_m">Часы</a></li>
                             <li><a class="page_m">VR-очки</a></li>
                             <li><a href="#" id="close-button">Закрыть</a></li>
@@ -177,8 +177,19 @@
                         </form>
                         <button id="close_captcha">Закрыть</button>
                     </div>
+                </div>  
+            </div>
+            <div class="notification-wrapper">
+                <div class="notification">
                 </div>
-                
+                <div class="instead_notification">
+                    <div class="bell"></div>
+                    <ul class="notif_on_hover">
+                        <li>Обновления</li>
+                        <li>Был обновлён дизайн главной страницы</li>
+                        <li>Теперь, чтобы оставить отзыв, нужно ввести капчу</li>
+                    </ul>
+                </div>
             </div>
         </main>
         <footer>
@@ -203,4 +214,11 @@
         </footer>
 </body>
 <script src="review_script.js"></script>
+<script>
+    var image = document.getElementById("myImage");
+  
+    image.addEventListener("click", function() {
+      window.location.href = "index.html";
+    });
+</script>
 </html>

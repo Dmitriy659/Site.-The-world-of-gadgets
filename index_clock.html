@@ -16,16 +16,16 @@
             <div class="top_menu_info">
                 <div class="menu_left">
                     <div class="icon_menu">
-                        <img src="img/icon.png" alt="Логотип сайта">
+                        <img src="img/icon.png" alt="Логотип сайта" id="myImage">
                     </div>
                     <div class="top_menu_head">
                         <h1>Гаджеты 21 века</h1>
                     </div>
                 </div>
                 <div class="top_menu_butt">
-                    <a href="index.html" class="page">Телефоны</a>
+                    <a href="index_phones.html" class="page">Телефоны</a>
                     <a href="index_clock.html" class="page">Часы</a>
-                    <a class="page">VR-очки</a>
+                    <a href="index_vr.html" class="page">VR-очки</a>
                     <a href="reviews.html" class="page">Отзывы</a>
                 </div>
                 <div class="menu_mobile">
@@ -38,9 +38,9 @@
                         </a>
                         <ul id="menu" class="menu_mobile_touch">
                             <li><a href="reviews.html" class="page_m">Отзывы</a></li>
-                            <li><a href="index.html" class="page_m">Телефоны</a></li>
+                            <li><a href="index_phones.html" class="page_m">Телефоны</a></li>
                             <li><a href="index_clock.html" class="page_m">Часы</a></li>
-                            <li><a class="page_m">VR-очки</a></li>
+                            <li><a href="index_vr.html" class="page_m">VR-очки</a></li>
                             <li><a href="#" id="close-button">Закрыть</a></li>
                         </ul>
                     </div>
@@ -52,7 +52,7 @@
         <h2 class="name">Часы</h2>
         <p class="head_info">Добро пожаловать на страницу умных часов, где время становится гораздо более, чем просто отсчетом минут и секунд. Здесь мы погружаемся в захватывающий мир инноваций, стиля и передовых технологий, представленных в часах различных компаний. От элегантных дизайнов до выдающихся функций, каждая модель расскажет свою уникальную историю о том, как современные технологии интегрируются в повседневную жизнь. Давайте вместе исследовать, как эти умные часы делают наше время более эффективным, стильным и впечатляющим. Приготовьтесь окунуться в мир интеллектуальных решений, представленных лучшими брендами, и выберите свой идеальный компаньон в невероятном путешествии времени и технологий.</p>
         <div class="nav_div">
-            <h2 class="nav_head">Содержание</h2>
+            <h3 class="nav_head">Содержание</h3>
             <nav>
                 <ol>
                     <li>
@@ -262,17 +262,15 @@
             </div>
         </div>
 
-
         <div class="notification-wrapper">
             <div class="notification">
-                <div class="not_number">1</div>
             </div>
             <div class="instead_notification">
                 <div class="bell"></div>
                 <ul class="notif_on_hover">
-                    <li><a class="notif_page"></a>Новости</li>
-                    <li><a class="notif_page"></a>Обновления</li>
-                    <li><a class="notif_page"></a>Предложения</li>
+                    <li>Обновления</li>
+                    <li>Был обновлён дизайн главной страницы</li>
+                    <li>Теперь, чтобы оставить отзыв, нужно ввести капчу</li>
                 </ul>
             </div>
         </div>
@@ -299,4 +297,11 @@
         </footer>
     </main>
 </body>
+<script>
+    var image = document.getElementById("myImage");
+  
+    image.addEventListener("click", function() {
+      window.location.href = "index.html";
+    });
+</script>
 </html>

@@ -52,12 +52,17 @@ p, li, a{
 }
 p {
     text-align: justify;
+    font-family: 'Montserrat', sans-serif;
 }
 a {
     text-decoration: none;
 }
 dd, dt {
     font-size: var(--text-size);
+}
+
+#myImage {
+    cursor: pointer;
 }
 
 :root {
@@ -358,14 +363,27 @@ div.item > p {
     top: 60%;
     right: 2%;
     border: 1px solid #ccc;
-    padding: 2px;
+    padding: 8px;
+    border-radius: 10px;
     display: none;
     list-style: none;
-    background-color: rgb(112, 204, 184);
+    background-color: #0c689d;
+    color: white;
   }
 
 .page_m {
     cursor: pointer;
+}
+.page_m:visited {
+    color: white;
+}
+
+#close-button {
+    color: #580c5c;
+}
+
+#close-button:visited {
+    color: #580c5c;
 }
 
 .item_main {
@@ -390,44 +408,38 @@ a:hover {
     right: 2%;
     bottom: 2%;
     z-index: 2;
-    background-color: rgb(22, 195, 108);
+    background-color: #6d9ae8;
     border-radius: 20px;
     background-image: url(img/notification.png);
     background-repeat: none;
     background-size: cover;
 }
-.not_number {
-    position: absolute;
-    background-color: rgb(237, 122, 141);
-    border-radius: 10px;
-    left: 85%;
-    font-size: 20px;
-    font-weight: bold;
-    width: 20px;
-    text-align: center;
-}
 .notif_on_hover {
-    list-style: none;
-    background-color: chartreuse;
+    list-style-type: disc;
+    background-color: #a8e1f0;
     border-radius: 10px 10px 0 0;
     position: absolute;
-    text-align: center;
     right: 0%;
     bottom: 100%;
     margin: 0;
-    padding: 5px;
-    width: 138px;
+    padding-left: 24px;
+    padding-right: 2px;
+    width: 260px;
+    font-size: 12px;
+}
+.notif_on_hover li:first-child {
+    text-align: center; /* выравнивание текста по центру для первого li */
+    list-style-type: none;
 }
 .instead_notification {
-    width: 148px; /* Начальная ширина 0 */
+    width: 286px; /* Начальная ширина 0 */
     height: 24px;
     border-radius: 0 0 10px 10px;
-    background-color: bisque;
     position: fixed;
     z-index: 2;
     right: 2%;
-    bottom: -120px;
-    background-color: rgb(22, 195, 108); /* Скрываем содержимое, которое выходит за границы блока */
+    bottom: -50%;
+    background-color: #407ce3; /* Скрываем содержимое, которое выходит за границы блока */
     transition: bottom 1s ease-in-out; /* Анимация изменения ширины */
 }
 .bell {
@@ -596,8 +608,7 @@ a:hover {
     #close-button {
         background: none;
         border: none;
-        cursor: pointer;
-        color: blue; /* Цвет кнопки */
+        cursor: pointer;    
     }
     
     #close-button:hover {
@@ -613,11 +624,7 @@ a:hover {
 }
 
 @media screen and (max-width: 760px){
-    .instead_notification {
-        width: 100px;
-    }
     .notif_on_hover {
-        width: 90px;
         font-size: var(--text-size);
     }
     .notification {
@@ -734,10 +741,10 @@ a:hover {
         right: 4%;
     }
     .instead_notification {
-        width: 80px;
+        width: 226px;
     }
     .notif_on_hover {
-        width: 70px;
+        width: 200px;
         font-size: var(--text-size);
     }
     .menu_mobile {

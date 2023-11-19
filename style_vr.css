@@ -1,0 +1,38 @@
+.pred {
+    text-indent: var(--text-indent);
+}
+
+.head_info_2 {
+    margin-top: 5px;
+}
+
+.head_info_1 {
+    margin-bottom: 5px;
+}
+
+.video_name {
+    text-align: center;
+}
+
+.vr_item_img {
+    width: 60%;
+    margin: 0 20%;
+}
+
+.vr_item_desc {
+    text-indent: var(--text-indent);
+}
+.ocen {
+    list-style-type: disc;
+}
+.ocen > li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(var(--text-size) - 2px);
+}
+.ocenka_p, .ocenka_m {
+    margin: 10px 0;
+}
+
+.last_vr_item {
+    margin-bottom: 40px;
+}
