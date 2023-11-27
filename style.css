@@ -57,13 +57,6 @@ p {
 a {
     text-decoration: none;
 }
-dd, dt {
-    font-size: var(--text-size);
-}
-
-#myImage {
-    cursor: pointer;
-}
 
 :root {
     --text-indent: 1.5em;
@@ -72,15 +65,6 @@ dd, dt {
 .name {
     text-align: center;
 }
-.terms {
-    margin: 0 auto;
-    border: 2px dotted black;
-    margin-bottom: 10px;
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-
-/*новая галерея*/
 .container {
     padding: 20px 5%;
 }
@@ -152,9 +136,6 @@ ul {
     text-indent: var(--text-indent);
 }
 
-.nav_div {
-    width: 100%;
-}
 .shop_apple {
     border-bottom: none;
 }
@@ -316,6 +297,9 @@ div.item > p {
     background-color: black;
 }
 
+#myImage {
+    cursor: pointer;
+}
 .top_menu {
     margin: 0;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.8)
@@ -334,7 +318,7 @@ div.item > p {
 }
 .top_menu_head {
     display: flex;
-    align-items: center; /* Выравниваем по вертикали */
+    align-items: center;
     height: 100%;
     color: white;
     -webkit-text-stroke: 1px black;
@@ -451,7 +435,6 @@ a:hover {
     background-size: cover;
 }
 
- /* Футер-грид */
 .footer-with-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -509,7 +492,7 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 1001px) {
+@media screen and (max-width: 1000px) {
     .footer-with-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -558,16 +541,11 @@ a:hover {
         cursor: default;
         margin: 0;
     }
-    /* Стили для всплывающего меню */
     .burger {
         cursor: pointer;
         height: 32px;
         margin: auto 0;
     }
-    /* Показываем меню при наведении на .burger */
-
-    
-    /* Стили для меню, открываемого через :target */
     .burger_part {
         width: 30px;
         height: 4px;
@@ -594,7 +572,6 @@ a:hover {
     .burger_part::after {
         top: 8px;
     }
-    /* Стили для меню, открываемого через :target */
     #menu:target {
         display: block;
     }

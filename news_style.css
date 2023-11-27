@@ -13,34 +13,28 @@
     border-right: solid 2px black;
     min-width: 300px;
 }
-
 .filter_t {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 22px;
 }
-
 #filter_news label {
     font-size: 22px;
     display: block;
     margin-bottom: 10px;
 }
-
-  .news_sub {
+.news_sub {
     font-size: 22px;
     margin-bottom: 20px;
 }
-
 form.seacrh_form input[type=text] {
     padding: 10px;
-    font-size: 17px;
+    font-size: 18px;
     border: 1px solid grey;
     float: left;
     width: 70%;
     background: #f1f1f1;
 }
-  
-  /* Style the submit button */
 form.seacrh_form button {
     float: left;
     width: 20%;
@@ -49,15 +43,12 @@ form.seacrh_form button {
     color: white;
     font-size: 17px;
     border: 1px solid grey;
-    border-left: none; /* Prevent double borders */
+    border-left: none;
     cursor: pointer;
 }
-  
 form.seacrh_form button:hover {
     background: #0b7dda;
 }
-  
-  /* Clear floats */
 form.seacrh_form::after {
     content: "";
     clear: both;
@@ -70,28 +61,23 @@ form.seacrh_form::after {
     flex-direction: column;
     border-bottom: solid 2px black;
 }
-
 .tags {
     display: flex;
     gap: 10px;
 }
-
 .tag {
     display: inline;
     background-color: #f2a0d7;
     padding: 5px;
     border-radius: 15%;
 }
-
 .tag_t {
     margin: 5px 0;
 }
-
 .new_name {
     margin: 5px 0;
     text-decoration: underline;
 }
-
 .new_date {
     margin: 5px 0;
 }

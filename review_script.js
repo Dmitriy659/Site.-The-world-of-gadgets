@@ -75,7 +75,6 @@ function Reviews(default_revs_elements)
     
     function getDateFromString(dateString) {
         var parts = dateString.split('.');
-        // Преобразование частей даты в числа (Месяцы начинаются с 0)
         return new Date(parts[2], parts[0], parts[1] - 1);
     }
     
